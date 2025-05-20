@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_weather"
+    tools:context=".fragments.news.WeatherActivity">
+    <include layout="@layout/toolbarthoitiet"
+        android:id="@+id/toolbarthoitiet"/>
+
+    <TextView
+        android:layout_below="@id/toolbarthoitiet"
+        android:id="@+id/tv_hanoi"
+        android:fontFamily="@font/baijamjuree_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="Hà nội"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv_homnay"
+        android:fontFamily="@font/baijamjuree_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_hanoi"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Today"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv_datehomnay"
+        android:fontFamily="@font/baijamjuree_medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_homnay"
+        android:gravity="center_horizontal"
+        android:text="22/8/2002 2h30"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv_datetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_datehomnay"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="hieu"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/img_weather"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/tv_datehomnay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:fontFamily="@font/baijamjuree_medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_weather"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="Mưa giông vào buổi sáng"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <RelativeLayout
+        android:id="@+id/rlt_nhietdo"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/tv_nhietdoC"
+            android:fontFamily="@font/baijamjuree_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="34"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_doc"
+            android:fontFamily="@font/baijamjuree_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_nhietdoC"
+            android:text="℃"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_doam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlt_nhietdo"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp" />
+
+    <TextView
+        android:id="@+id/tv_doam"
+        android:fontFamily="@font/baijamjuree_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlt_nhietdo"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@id/img_doam"
+        android:text="humidity"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_doamphantram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_doam"
+        android:layout_marginStart="40dp"
+        android:text="84"
+        android:fontFamily="@font/baijamjuree_regular"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/tv_phantram"
+        android:layout_below="@id/tv_doam"
+        android:layout_toEndOf="@id/tv_doamphantram"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/baijamjuree_regular"
+        android:text="%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_toStartOf="@id/tv_tocdogio"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/rlt_nhietdo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:fontFamily="@font/baijamjuree_medium"
+        android:id="@+id/tv_tocdogio"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/rlt_nhietdo"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:text="wind speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_windspeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_tocdogio"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@id/tv_kmh"
+        android:text="11"
+        android:fontFamily="@font/baijamjuree_regular"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv_kmh"
+        android:fontFamily="@font/baijamjuree_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_tocdogio"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:text="m/s"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+    <View
+        android:id="@+id/view_ngan"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tv_kmh"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <ImageView
+        android:id="@+id/img_cloud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_ngan"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_cloud"
+        android:fontFamily="@font/baijamjuree_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_ngan"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/img_cloud"
+        android:text="cloud"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_chisodammay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cloud"
+        android:layout_marginStart="40dp"
+        android:text="0"
+        android:fontFamily="@font/baijamjuree_regular"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_toStartOf="@id/tv_kk"
+        android:layout_below="@id/view_ngan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_kk"
+        android:fontFamily="@font/baijamjuree_medium"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/view_ngan"
+        android:textColor="@color/white"
+        android:layout_alignParentEnd="true"
+        android:textSize="18sp"
+        android:text="air quality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_khongkhi"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tv_kk"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:text="100"
+        android:fontFamily="@font/baijamjuree_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

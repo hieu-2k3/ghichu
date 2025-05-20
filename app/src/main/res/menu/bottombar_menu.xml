@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/item_note_ai"
+        android:title="NoteAI"
+        android:icon="@drawable/ic_note_ai"/>
+
+    <item
+        android:id="@+id/item_news"
+        android:title="News"
+        android:icon="@drawable/ic_tools"/>
+
+    <item
+        android:id="@+id/item_setting"
+        android:title="Setting"
+        android:icon="@drawable/ic_setting_note"/>
+
+
+
+<!--    <item-->
+<!--        android:id="@+id/item3"-->
+<!--        android:title="@string/menu_profile"-->
+<!--        android:icon="@drawable/ic_person_outline_white_24dp"/>-->
+</menu>
